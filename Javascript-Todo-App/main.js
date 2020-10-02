@@ -25,14 +25,16 @@ class item{
     	input.value = name;
     	input.classList.add('item_input');
 
-    	var edit = document.createElement('button');
-    	edit.classList.add('edit');
-    	edit.innerHTML = "Edit";
+    	var edit = document.createElement('i');
+		edit.classList.add('far');
+		edit.classList.add('fa-edit')
+		edit.classList.add('edit')
     	edit.addEventListener('click', () => this.edit(input, name));
 
-    	var remove = document.createElement('button');
-    	remove.classList.add('remove');
-    	remove.innerHTML = "Done";
+		var remove = document.createElement('i');
+		remove.classList.add('far');
+		remove.classList.add('fa-check-square');
+		remove.classList.add('remove');
     	remove.addEventListener('click', () => this.remove(itemBox, name));
 
     	container.appendChild(itemBox);
